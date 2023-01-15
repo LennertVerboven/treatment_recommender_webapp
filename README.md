@@ -1,36 +1,16 @@
-# Doctor website
+# Treatment recommender webapp
 
-todo crontab! 
-
-https://www.thegeekstuff.com/2009/11/how-to-install-edit-or-remove-cron-jobs-in-batch-mode/
-
-
-### Software:
-- Getest op Ubuntu 18.04, andere OS wellicht ook ok :)
-- Python >3.6  (Django 3 ondersteunt enkel python 3.6 en later)
-- nginx
-- npm (node package manager voor JavaScript: https://www.npmjs.com/ )
-- moreutils (voor `ts` command dat timestamp toevoegt aan cron output, `scripts/backup_sqlite_database.sh`)
-- sqlite3
-
-### Lokaal installeren
+### Local install
 
 ```bash
-# clone repo, cd into
-git clone git@github.com:rubencart/doctor-web.git
-cd doctor-web
-git checkout redcap
-git pull
-python3 -m venv ./venv/
-source venv/bin/activate
-pip install -r requirements.txt
+# download repor and cd into it
+conda env create --file=environment.yml
+conda activate venv_treatment_recommender
 
 cd doctorsite/frontend
 npm install
 npm run build
 cd ../../
-
-# change line 33 in doctorsite/doctorsite/settings.py from `DEBUG = False` to `DEBUG = True`
 
 python doctorsite/manage.py migrate
 python doctorsite/manage.py createsuperuser
