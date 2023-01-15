@@ -4,8 +4,8 @@
 
 ```bash
 # download repor and cd into it
-conda env create --file=environment.yml
-conda activate venv_treatment_recommender
+conda env create --prefix=./venv --file=./environment.yml 
+conda activate ./venv/
 
 cd doctorsite/frontend
 npm install
@@ -14,11 +14,10 @@ cd ../../
 
 python doctorsite/manage.py migrate
 python doctorsite/manage.py createsuperuser
-
-# enter 'yes'
 python doctorsite/manage.py collectstatic
 
-# get pickle files from  https://drive.google.com/drive/folders/1-Tc7z7mEE7U5D3YDzSbEJ7ahWF5bY75p?usp=sharing and copy/paste in doctorsite/doctorapp/redcap/pickles
+# Train the model on the training dataset
+python doctorsite/doctorapp/algorithm/train_model.py doctorsite/doctorapp/algorithm/pickles/full_training_set_v2_includes_all_rounds_supplemented_with_modified_regimens_from_harvesting_rounds_to_exclude_three_drugs.csv octorsite/doctorapp/algorithm/pickles/model.pkl
 
 python doctorsite/manage.py runserver
 
