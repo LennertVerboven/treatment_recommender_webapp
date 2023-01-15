@@ -1,0 +1,8 @@
+{% extends "patients/base_generic.html" %}
+
+{% block content %}
+<div>
+    <p class="lead logout-title">You've been logged out...</p>
+    <a href="{% url 'home' %}" role="button" class="btn btn-primary">Log back in</a>
+</div>
+{% endblock %}

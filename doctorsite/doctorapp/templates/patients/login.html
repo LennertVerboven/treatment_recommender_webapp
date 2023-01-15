@@ -1,0 +1,35 @@
+{% extends "patients/base_generic.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div>
+    {% if form.errors %}
+    <div class="alert alert-danger" role="alert">
+        Your username and password didn't match. Please try again.
+    </div>
+    {% endif %}
+
+    {% if next %}
+    {% if user.is_authenticated %}
+    <div class="alert alert-danger" role="alert">
+    Your account doesn't have access to this page. To proceed,
+        please login with an account that has access.
+    </div>
+    {% else %}
+    <p class="lead">Please login to see this page.</p>
+    {% endif %}
+    {% endif %}
+
+    <form method="post" action="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.username|as_crispy_field }}
+        </div>
+        <div class="form-group">
+            {{ form.password|as_crispy_field }}
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <input type="hidden" name="next" value="{{ next }}">
+    </form>
+</div>
+{% endblock %}

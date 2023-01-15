@@ -1,0 +1,15 @@
+html,body {
+    height: 100vh;
+}
+.logout-title {
+    margin-bottom: 2rem;
+}
+.torch-logo {
+    margin-bottom: 4rem;
+}
+.torch-logo-row {
+    height: 50vh;
+}
+.content-row {
+    height: 50vh;
+}

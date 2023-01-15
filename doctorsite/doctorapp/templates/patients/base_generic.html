@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TBC Regimen | UAntwerpen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'patients/template_style.css' %}">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row align-items-end justify-content-center torch-logo-row">
+            <div class="col-10 col-md-8">
+                <figure class="figure torch-logo">
+                    <img src="{% static 'patients/torch.png' %}" class="figure-img img-fluid rounded">
+                </figure>
+            </div>
+        </div>
+        <div class="row align-items-start justify-content-center content-row">
+            <div class="col-10 col-md-8">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
