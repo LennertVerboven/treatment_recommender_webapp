@@ -1,4 +1,4 @@
-name: /Users/lennertverboven/Desktop/tb_treatment_recommender/doctor-web-master/venv
+name: venv_treatment_recommender
 channels:
   - defaults
   - conda-forge
@@ -68,4 +68,4 @@ dependencies:
   - xlrd=2.0.1=pyhd3eb1b0_0
   - xz=5.2.8=h6c40b1e_0
   - zlib=1.2.13=h4dc903c_0
-prefix: /Users/lennertverboven/Desktop/tb_treatment_recommender/doctor-web-master/venv
+prefix: ./venv
