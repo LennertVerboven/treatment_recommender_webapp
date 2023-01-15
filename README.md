@@ -22,6 +22,7 @@ python doctorsite/doctorapp/algorithm/train_model.py doctorsite/doctorapp/algori
 python doctorsite/manage.py runserver
 
 # browse to localhost:8000/admin to add doctors, doctors are linked to patients using the assoc_doctors field in the json file and matching it to the doctor id used in hte admin panel
+# browse to localhost:8000/ to login using either the admin account created, or a newly created doctor to see tha patients and run the treatment recommender
 ```
 
 This is a dummy exmaple to showcase the webapp and the treatment recommender, but it contains no real patient data, and should be connected to a real database before use.
