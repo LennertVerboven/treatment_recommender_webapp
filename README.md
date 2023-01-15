@@ -4,7 +4,7 @@
 
 ```bash
 # download repor and cd into it
-conda env create --file=environment.yml
+conda env create --prefix=./venv --file=./environment.yml 
 conda activate venv_treatment_recommender
 
 cd doctorsite/frontend
