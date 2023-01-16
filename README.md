@@ -3,7 +3,7 @@
 ### Local install
 
 ```bash
-# download repor and cd into it
+# download repository and cd into it
 conda env create --prefix=./venv --file=./environment.yml 
 conda activate ./venv/
 
