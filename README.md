@@ -25,4 +25,4 @@ python doctorsite/manage.py runserver
 # browse to localhost:8000/ to login using either the admin account created, or a newly created doctor to see tha patients and run the treatment recommender
 ```
 
-This is a dummy exmample to showcase the webapp and the treatment recommender, but it contains no real patient data, and should be connected to a real database before use.
+This is a dummy example to showcase the webapp and the treatment recommender, but it contains no real patient data, and should be connected to a real database before use.
