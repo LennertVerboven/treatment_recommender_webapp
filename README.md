@@ -17,7 +17,7 @@ python doctorsite/manage.py createsuperuser
 python doctorsite/manage.py collectstatic
 
 # Train the model on the training dataset
-python doctorsite/doctorapp/algorithm/train_model.py doctorsite/doctorapp/algorithm/pickles/full_training_set_v2_includes_all_rounds_supplemented_with_modified_regimens_from_harvesting_rounds_to_exclude_three_drugs.csv octorsite/doctorapp/algorithm/pickles/model.pkl
+python doctorsite/doctorapp/algorithm/train_model.py doctorsite/doctorapp/algorithm/pickles/full_training_set_v2_includes_all_rounds_supplemented_with_modified_regimens_from_harvesting_rounds_to_exclude_three_drugs.csv doctorsite/doctorapp/algorithm/pickles/model.pkl
 
 python doctorsite/manage.py runserver
 
